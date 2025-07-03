@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Sphere, Line } from '@react-three/drei';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import SectionHeader from './SectionHeader';
 import ButtonLink from './ButtonLink';
 import { socialLinks } from '../data/socials';
@@ -18,7 +18,7 @@ interface SocialIconProps {
 // A simple 3D abstract data visualization
 function AbstractDataVisualization() {
   const meshRef = useRef<THREE.Mesh>(null);
-  const lineRef = useRef<THREE.LineSegments>(null);
+  const lineRef = useRef<any>(null);
 
   useFrame(() => {
     if (meshRef.current) {
@@ -109,6 +109,14 @@ const SocialIcon = ({ name, url, icon }: SocialIconProps) => {
 
 
 export default function Contact() {
+  const [currentUrl, setCurrentUrl] = useState('');
+  
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setCurrentUrl(window.location.href);
+    }
+  }, []);
+
   return (
     <section id="contact" className="relative px-6 py-24 bg-background text-text overflow-hidden">
       <div className="container mx-auto relative z-10">
@@ -123,14 +131,19 @@ export default function Contact() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             <h3 className="text-3xl font-bold font-sans text-accent mb-6">Send a Message</h3>
-            <form className="space-y-6">
+            <form className="space-y-6" action="https://formsubmit.co/akifazherq@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="New message from Portfolio Website" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value={currentUrl} />
               <div>
                 <label htmlFor="name" className="block text-gray-400 font-sans text-sm mb-2">Name</label>
                 <input 
                   type="text" 
                   id="name" 
+                  name="name"
                   className="w-full p-3 rounded-lg bg-background border border-border_dark text-text font-sans focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all duration-300"
                   placeholder="Your Name"
+                  required
                 />
               </div>
               <div>
@@ -138,20 +151,26 @@ export default function Contact() {
                 <input 
                   type="email" 
                   id="email" 
+                  name="email"
                   className="w-full p-3 rounded-lg bg-background border border-border_dark text-text font-sans focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all duration-300"
                   placeholder="your.email@example.com"
+                  required
                 />
               </div>
               <div>
                 <label htmlFor="message" className="block text-gray-400 font-sans text-sm mb-2">Message</label>
                 <textarea 
                   id="message" 
+                  name="message"
                   rows={5} 
                   className="w-full p-3 rounded-lg bg-background border border-border_dark text-text font-sans focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-all duration-300 resize-y"
                   placeholder="Your message..."
+                  required
                 ></textarea>
               </div>
-              <ButtonLink href="#" variant="primary">Send Message</ButtonLink>
+              <button type="submit" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-accent hover:bg-accent/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent transition-colors duration-300">
+                Send Message
+              </button>
             </form>
           </motion.div>
 
