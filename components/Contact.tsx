@@ -135,6 +135,7 @@ export default function Contact() {
               <input type="hidden" name="_subject" value="New message from Portfolio Website" />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_next" value={currentUrl} />
+              <input type="hidden" name="_resume_url" value="https://akifq.com/Akif-Qureshi-Resume.pdf" />
               <div>
                 <label htmlFor="name" className="block text-gray-400 font-sans text-sm mb-2">Name</label>
                 <input 
