@@ -2,8 +2,7 @@
 module.exports = {
   reactStrictMode: true,
   output: 'export',
-  basePath: '/Portfolio-website',
-  assetPrefix: '/Portfolio-website/',
+  // Custom domain doesn't need basePath or assetPrefix
   images: {
     unoptimized: true,
   },
