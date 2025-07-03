@@ -2,11 +2,15 @@
   "name": "akif-portfolio",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://akifq.github.io/Portfolio-website",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build",
+    "predeploy": "npm run export",
+    "deploy": "gh-pages -d out -b gh-pages"
   },
   "dependencies": {
     "@react-three/drei": "^9.122.0",
@@ -33,6 +37,7 @@
     "@types/react-dom": "^18.2.18",
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.2.3",
+    "gh-pages": "^6.1.1",
     "typescript": "^5.3.3"
   }
 }
