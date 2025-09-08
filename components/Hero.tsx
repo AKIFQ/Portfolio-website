@@ -163,18 +163,17 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.6 }}
       >
-        <motion.div 
-          className="w-6 h-10 border-2 border-text-secondary rounded-full flex justify-center cursor-pointer hover:border-accent transition-colors"
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
+        <button
+          aria-label="Scroll to About section"
+          className="w-6 h-10 border-2 border-text-secondary rounded-full flex justify-center hover:border-accent transition-colors"
           onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
         >
-          <motion.div 
+          <motion.span 
             className="w-1 h-3 bg-text-secondary rounded-full mt-2"
-            animate={{ opacity: [1, 0, 1] }}
+            animate={{ opacity: [1, 0, 1], y: [0, 8, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           />
-        </motion.div>
+        </button>
       </motion.div>
     </section>
   );

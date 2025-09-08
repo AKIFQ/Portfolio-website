@@ -12,6 +12,8 @@ export default function SectionHeader({ title }: SectionHeaderProps) {
   const titleRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
+    // Ensure plugin is registered locally
+    gsap.registerPlugin(ScrollTrigger);
     if (titleRef.current) {
       gsap.fromTo(
         titleRef.current,
