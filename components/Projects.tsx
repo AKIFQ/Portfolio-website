@@ -3,17 +3,25 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
-import { projects } from '../data/projects';
+import { projects, type Project } from '../data/projects';
 import { useState } from 'react';
 
+// Enhanced project type extends base Project with gallery metadata
+interface EnhancedProject extends Project {
+  images: string[];
+  imageDescriptions: string[];
+  isGif: boolean;
+}
+
 // Enhanced project data with multiple images
-const enhancedProjects = projects.map(project => {
+const enhancedProjects: EnhancedProject[] = projects.map(project => {
   if (project.name === 'PATIO AI') {
     return {
       ...project,
       images: ['patioai1.png', 'patioai2.png'], // Light and dark mode
-      imageDescriptions: ['Light Mode Interface', 'Dark Mode Interface']
-    };
+      imageDescriptions: ['Light Mode Interface', 'Dark Mode Interface'],
+      isGif: false,
+    } as EnhancedProject;
   }
   if (project.name === 'SAV') {
     return {
@@ -21,18 +29,18 @@ const enhancedProjects = projects.map(project => {
       images: [project.image],
       imageDescriptions: ['SAV in Action'],
       isGif: true // Flag to indicate this is a GIF
-    };
+    } as EnhancedProject;
   }
   return {
     ...project,
     images: [project.image],
     imageDescriptions: ['Application Interface'],
     isGif: false
-  };
+  } as EnhancedProject;
 });
 
 interface ProjectCardProps {
-  project: typeof enhancedProjects[0];
+  project: EnhancedProject;
   index: number;
 }
 
