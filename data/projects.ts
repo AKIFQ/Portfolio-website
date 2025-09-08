@@ -11,6 +11,50 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    name: 'PATIO AI',
+    image: 'patioai1.png',
+    github: 'https://github.com/AKIFQ/patioai',
+    live: 'https://www.patioai.chat',
+    description: 'LIVE NOW • True multi-user AI chat platform with complete conversational context sharing across group conversations. Experience real-time collaboration with multiple AI models simultaneously while maintaining full conversation history and context for all participants.',
+    features: [
+      'True multi-user AI conversations with complete shared conversational context in group chats',
+      'Heuristic model routing engine that auto-selects optimal AI models with cost-aware fallbacks',
+      'Memory-leak-resistant WebSocket system with adaptive health monitoring for production scale',
+      'Tier-based quota system with token limits (8K-128K) and context windows (32K-2M)',
+      'Production-grade Stripe integration with webhook event handling and subscription management',
+    ],
+    challenges: [
+      'Architected memory-leak-resistant WebSocket system with adaptive health monitoring and connection deduplication',
+      'Built heuristic model routing engine analyzing message content to auto-select optimal AI models',
+      'Implemented tier-based quota system enforcing token limits via PostgreSQL RPC functions',
+      'Integrated OpenRouter with provider-specific reasoning modes and streaming AI responses',
+      'Designed real-time collaborative AI interactions maintaining conversation state across users',
+    ],
+    tech: ['TypeScript', 'Next.js 15', 'Socket.IO', 'PostgreSQL', 'OpenRouter', 'AI SDK', 'Stripe', 'Tailwind CSS'],
+  },
+  {
+    name: 'SAV',
+    image: 'sav.gif',
+    github: 'https://github.com/AKIFQ/sav',
+    live: 'https://github.com/AKIFQ/sav',
+    description: 'Shadow VCS for AI Agents • A local-first staging version-control system that quarantines AI-generated code, assigns automatic risk scores, and applies YAML-based policy gates before changes reach Git.',
+    features: [
+      'Quarantines AI-generated code in .sav/commits/* with automatic risk scoring',
+      'AST-guarded policy engine that auto-approves docs & small patches yet blocks sensitive patterns',
+      'YAML-based policy gates for systematic code review and approval workflows',
+      'Reduces human review load by ~60% in multi-agent workflows through intelligent filtering',
+      'Pip-installable in 3s with GitHub Actions CI and pre-push hook integration',
+    ],
+    challenges: [
+      'Designed AST-guarded policy engine for intelligent code pattern recognition and risk assessment',
+      'Built local-first staging system with version control integration for AI-generated content',
+      'Implemented YAML-based policy framework for systematic code review automation',
+      'Created packaging and distribution system for rapid deployment across development teams',
+      'Architected multi-agent workflow support with intelligent review load optimization',
+    ],
+    tech: ['Python', 'AST', 'YAML', 'Git', 'GitHub Actions', 'CI/CD', 'Version Control'],
+  },
+  {
     name: 'Ordelo',
     image: 'ordelo.png',
     github: 'https://github.com/AKIFQ/ordelo',

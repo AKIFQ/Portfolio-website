@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//var/folders/_j/58p1_y194y384_6505s0mj_c0000gn/T/TemporaryItems/NSIRD_screencaptureui_pOCY8W/**)",
+      "Read(//var/folders/_j/58p1_y194y384_6505s0mj_c0000gn/T/TemporaryItems/NSIRD_screencaptureui_AnkhMi/**)",
+      "Read(//var/folders/_j/58p1_y194y384_6505s0mj_c0000gn/T/TemporaryItems/NSIRD_screencaptureui_gOLdvt/**)",
+      "Read(//var/folders/_j/58p1_y194y384_6505s0mj_c0000gn/T/TemporaryItems/NSIRD_screencaptureui_pm1Q9E/**)",
+      "WebSearch",
+      "WebFetch(domain:fortuitous-posterity-697750.framer.app)",
+      "Bash(npm run dev:*)",
+      "WebFetch(domain:github.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

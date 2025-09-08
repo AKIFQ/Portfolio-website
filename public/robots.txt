@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://akifq.github.io/Portfolio-website/sitemap.xml
+
+
