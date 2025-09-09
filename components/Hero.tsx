@@ -10,7 +10,7 @@ export default function Hero() {
   const opacity = useTransform(scrollY, [0, 600], [1, 0]);
   
   return (
-    <section className="min-h-screen flex items-center justify-center bg-background text-text-primary relative overflow-hidden">
+    <section className="h-screen sticky top-0 flex items-center justify-center bg-background text-text-primary relative overflow-hidden z-0">
       {/* Background gradient - Dynamic asymmetrical design */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-accent/60" />
       <div className="absolute inset-0 bg-gradient-to-tr from-black/80 via-transparent to-accent/40" />

@@ -12,9 +12,16 @@ export default function Home() {
         <title>Akif Qureshi | Software Engineer</title>
         <meta name="description" content="Akif Qureshi's Software Engineering Portfolio - Crafting elegant solutions through code." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#00ff7f" />
+        <meta name="theme-color" content="#000000" />
         <meta name="robots" content="index,follow" />
-        <link rel="icon" href="/favicon-32x32.png" />
+        {/* Icons */}
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="alternate icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
+        <link rel="manifest" href="/site.webmanifest" />
         {/* Canonical URL */}
         <link rel="canonical" href="https://akifq.github.io/Portfolio-website/" />
 
