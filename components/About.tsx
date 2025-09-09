@@ -28,7 +28,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-32 bg-background text-text-primary">
+    <section id="about" className="py-32 bg-background text-text-primary relative z-10">
       <div className="container mx-auto px-8 md:px-40">
         {/* Section Header */}
         <motion.div

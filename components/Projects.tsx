@@ -292,7 +292,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-32 bg-background text-text-primary">
+    <section id="projects" className="py-32 bg-background text-text-primary relative z-10">
       <div className="container mx-auto px-8 lg:px-12 xl:px-16">
         {/* Section Header */}
         <motion.div

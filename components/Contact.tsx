@@ -32,7 +32,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-32 bg-background text-text-primary">
+    <section id="contact" className="py-32 bg-background text-text-primary relative z-10">
       <div className="container mx-auto px-8 md:px-40">
         {/* Section Header */}
         <motion.div
